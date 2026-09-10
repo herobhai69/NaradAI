@@ -1,0 +1,57 @@
+{
+  "tts": {
+    "primary_provider": "edge_tts",
+    "fallback_provider": "sarvam",
+    "sarvam": {
+      "model": "bulbul:v3",
+      "speaker": "shreya"
+    },
+    "edge_tts": {
+      "voice_map": {
+        "hi-IN": "hi-IN-SwaraNeural",
+        "bn-IN": "bn-IN-TanishaaNeural",
+        "gu-IN": "gu-IN-DhwaniNeural",
+        "mr-IN": "mr-IN-AarohiNeural",
+        "ta-IN": "ta-IN-PallaviNeural",
+        "te-IN": "te-IN-ShrutiNeural",
+        "kn-IN": "kn-IN-SapnaNeural",
+        "ml-IN": "ml-IN-SobhanaNeural",
+        "pa-IN": "pa-IN-OjasNeural",
+        "or-IN": "or-IN-MitaNeural",
+        "en-IN": "en-IN-NeerjaNeural"
+      },
+      "fallback_voice": "en-IN-NeerjaNeural"
+    }
+  },
+  "stt": {
+    "primary_provider": "sarvam",
+    "fallback_provider": "whisper_local",
+    "sarvam": {
+      "model": "saaras:v3"
+    },
+    "whisper_local": {
+      "model_size": "turbo"
+    }
+  },
+  "rag_engine": {
+    "primary": "ollama",
+    "fallback": "groq",
+    "ollama": {
+      "model": "llama3.1",
+      "temperature": 0.1
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "temperature": 0.1
+    }
+  },
+  "ai_router": {
+    "primary": "gemini",
+    "fallback": "ollama"
+  },
+  "lang_detect": {
+    "primary": "gemini",
+    "fallback": "fasttext"
+  }
+  
+}
